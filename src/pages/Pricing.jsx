@@ -24,7 +24,7 @@ export default function Pricing() {
         <h1>Pricing</h1>
         <p className="lede">
           These plans are placeholders for the marketing shell. They are not a quote, and this
-          page does not check out or sign you in.
+          page does not take payment, check out, or sign you in.
         </p>
       </section>
       <ul className="card-grid">

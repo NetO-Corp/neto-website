@@ -28,8 +28,9 @@ export default function Home() {
         <p className="eyebrow">Public discovery</p>
         <h1>What do you want to do?</h1>
         <p className="lede">
-          Start from a goal. Home and Pricing stay on this public site. The Workspace is a
-          separate product, and this website does not sign you in.
+          Start from a goal. Home and Pricing stay on this public site. Access is issued by
+          NetO, not self-serve signup. The Workspace is a separate product, and this website
+          does not sign you in.
         </p>
       </section>
 

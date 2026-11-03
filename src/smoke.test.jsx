@@ -31,11 +31,16 @@ test('home renders the public discovery shell', () => {
   }
 
   expect(screen.getByRole('link', { name: /view pricing/i })).toHaveAttribute('href', '/pricing')
+  expect(screen.getAllByText(/access is issued by neto, not self-serve signup/i).length).toBeGreaterThan(0)
+  expect(screen.queryByRole('link', { name: /sign up|create account|get started/i })).not.toBeInTheDocument()
+  expect(screen.queryByRole('button', { name: /sign up|create account|checkout|buy now/i })).not.toBeInTheDocument()
 })
 
 test('pricing route renders a public placeholder', () => {
   renderAt('/pricing')
   expect(screen.getByRole('heading', { level: 1, name: /^pricing$/i })).toBeInTheDocument()
   expect(screen.getByRole('heading', { name: /explore/i })).toBeInTheDocument()
+  expect(screen.getAllByText(/does not take payment/i).length).toBeGreaterThan(0)
   expect(screen.getAllByText(/placeholder/i).length).toBeGreaterThan(0)
+  expect(screen.queryByRole('button', { name: /pay|checkout|subscribe|buy now/i })).not.toBeInTheDocument()
 })
