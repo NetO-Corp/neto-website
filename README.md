@@ -29,7 +29,7 @@ The "Continue in Workspace" links read `VITE_WORKSPACE_ORIGIN`.
 cp .env.example .env
 ```
 
-Set `VITE_WORKSPACE_ORIGIN` to the future Workspace origin before production use. When the variable is unset, the link falls back to `https://workspace.example.com`. That fallback is a placeholder address, not a live login.
+Production builds read `.env.production`, which points Continue in Workspace at `https://system.neto-x.com/customer-workspace`. When the variable is unset, the link falls back to `https://workspace.example.com` (a placeholder, not a live login).
 
 ## Scripts
 
