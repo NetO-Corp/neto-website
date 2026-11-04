@@ -4,9 +4,15 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 
+const rawBase = import.meta.env.BASE_URL || '/'
+const basename = rawBase === '/' ? undefined : rawBase.replace(/\/$/, '')
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <BrowserRouter
+      basename={basename}
+      future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+    >
       <App />
     </BrowserRouter>
   </StrictMode>,
